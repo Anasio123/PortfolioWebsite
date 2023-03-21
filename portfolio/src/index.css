@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+/* VANAF HIER EIGEN CSS */
+#navLink {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+#navLink:hover {
+  color: #000;
+}
+
+#navLink::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#navLink:hover::before {
+  transform: scaleX(1);
+}
+/* HANDS */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Dit zorgt ervoor dat de footer onderaan blijft staan */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* ---- */
+
+/* Dit zorgt voor de witruimte tussen de navbar links */
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    /* margin: 0 1rem; */
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+}
+/* ---- */
+
+/* Dit zorgt ervoor dat de groetingtekst op height 0px staan als foto verspringt */
+@media (max-width: 992px) {
+  #greeting {
+    height: 0px;
+  }
+}
+
+html,
+body {
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+
+  /* background: rgb(63, 161, 251);
+  background: radial-gradient(circle, rgba(63, 161, 251, 1) 0%, rgba(0, 0, 0, 1) 84%); */
+
+  /* background: rgb(12, 25, 33);
+  background: radial-gradient(circle, rgba(12, 25, 33, 1) 0%, rgba(0, 29, 64, 1) 100%); */
+
+  /* background: rgb(0, 14, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 14, 36, 1) 24%,
+    rgba(0, 95, 125, 1) 68%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+
+  /* background: rgb(0, 14, 85);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 14, 85, 1) 16%,
+    rgba(11, 3, 24, 1) 43%,
+    rgba(8, 29, 55, 1) 86%,
+    rgba(15, 41, 51, 1) 100%
+  ); */
+
+  /* background-image: linear-gradient(
+    to bottom,
+    #110a54,
+    #0b1e65,
+    #023075,
+    #004284,
+    #005392,
+    #005e99,
+    #00699e,
+    #0074a3,
+    #007aa1,
+    #00809f,
+    #10859b,
+    #268a97
+  ); */
+
+  /* background-image: linear-gradient(
+    to bottom,
+    #121f3d,
+    #122853,
+    #10316a,
+    #0c3a82,
+    #06439a,
+    #0753af,
+    #0664c4,
+    #0076d9,
+    #0093eb,
+    #00aef6,
+    #00c8fc,
+    #00e1ff
+  ); */
+
+  background-color: #000000;
+  background-image: linear-gradient(0deg, #000000 0%, #154fb3 100%);
+}
+
+*,
+#navLink,
+footer {
+  color: rgb(255, 255, 255);
+}
