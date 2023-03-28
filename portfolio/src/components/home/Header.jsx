@@ -1,4 +1,26 @@
 import Foto from "../../pictures/314472729_778188146614466_2569173996259762878_n.jpg";
+import { TypeAnimation } from "react-type-animation";
+
+const kopTitel = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        // Same String at the start will only be typed once, initially
+        "Student Applied Computer Science",
+        2000,
+        "Mobile/Web & Enterprise Developer",
+        2000,
+        "Tech Enthusiast",
+        2000,
+        "Analytical thinking",
+        2000,
+      ]}
+      speed={15}
+      style={{ fontSize: "1.5em" }}
+      repeat={Infinity}
+    />
+  );
+};
 
 export const Header = () => {
   return (
@@ -17,7 +39,15 @@ export const Header = () => {
               </h1>
               <h1>I'm Anasio Claeys</h1>
 
-              <h4 className="mb-5 mt-3">Student Applied Computer Science</h4>
+              {/* <h4 className="mb-5 mt-3">Student Applied Computer Science</h4> */}
+              <div
+                // plaats dit in het midden ook als het verspringt
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {kopTitel()}
+              </div>
             </div>
           </div>
           <div className="col-lg-6">
@@ -31,35 +61,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        {/* Ik wil een mooie golvende lijn */}
       </div>
-
-      {/* DIT IS TIJDELIJKE CENTRALE PARAGRAAF VOOR WHO AM I? */}
-      {/* <div>
-        <p
-          //zorg dat het mooi in het midden komt en dat de tekst van lang naar kort gaat
-          style={{
-            paddingTop: "50px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-
-            paddingLeft: "90px",
-            paddingRight: "90px",
-            textAlign: "center",
-          }}
-        >
-          Welcome to my online portfolio! My name is Anasio Claeys, and I am currently a student at
-          HoGent, pursuing my Bachelor's degree in Applied Computer Science. As a developer, I am
-          passionate about exploring the vast world of technology and constantly improving my skills
-          to create innovative and efficient solutions. Through my projects and experiences, I have
-          gained expertise in various programming languages, frameworks, and tools, including Java,
-          HTML, CSS, Javascript, React. I am excited to share my work with you and demonstrate how I
-          have applied my knowledge to real-world projects. Thank you for taking the time to visit
-          my portfolio
-        </p>
-      </div> */}
-      {/* ---------------------------------------------------------------------------------------------- */}
     </div>
   );
 };

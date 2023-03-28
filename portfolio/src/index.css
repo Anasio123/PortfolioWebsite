@@ -4,21 +4,44 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 /* VANAF HIER EIGEN CSS */
+
+/* Zorgt voor initialisatie van de body app */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* Dit zorgt ervoor dat de footer onderaan blijft staan */
+footer {
+  position: initial;
+  bottom: 0;
+  width: 100%;
+
+  margin-top: auto !important;
+}
+
 #navLink {
   position: relative;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
 }
 
 #navLink:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 #navLink::before {
@@ -29,7 +52,7 @@ code {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #ffffff;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -73,12 +96,6 @@ code {
   }
 }
 
-/* Dit zorgt ervoor dat de footer onderaan blijft staan */
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 /* ---- */
 
 /* Dit zorgt voor de witruimte tussen de navbar links */
